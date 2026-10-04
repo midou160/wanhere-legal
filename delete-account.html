@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="طلب حذف حساب WanHere والبيانات المرتبطة به.">
+  <title>حذف الحساب | WanHere</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <div class="brand">WanHere</div>
+    <h1>حذف حساب WanHere</h1>
+    <p>تستطيع بدء حذف حسابك من هذه الصفحة حتى لو لم يكن التطبيق مثبتًا على جهازك. سنرسل رمز تحقق إلى البريد المسجل في الحساب للتأكد من ملكيته.</p>
+    <nav class="nav" aria-label="صفحات WanHere">
+      <a href="index.html">سياسة الخصوصية</a>
+      <a href="terms.html">شروط الاستخدام</a>
+    </nav>
+
+    <div class="warning"><strong>تنبيه:</strong> بعد تأكيد الحذف، يُحذف الحساب وبياناته ومحتواه المرتبط به وصوره من الخدمة. لا يمكن التراجع عن الحذف.</div>
+
+    <section id="email-step">
+      <label for="email">البريد الإلكتروني المسجل في WanHere</label>
+      <input id="email" type="email" autocomplete="email" inputmode="email" required maxlength="254" placeholder="name@example.com">
+      <button id="send-code" class="full" type="button">إرسال رمز التحقق</button>
+      <div id="code-area" hidden>
+        <label for="code">رمز التحقق الذي وصلك بالبريد</label>
+        <input id="code" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="10" pattern="[0-9]{6,10}" placeholder="••••••">
+        <button id="verify-code" class="full" type="button">التحقق والمتابعة</button>
+      </div>
+    </section>
+
+    <section id="delete-step" hidden>
+      <label class="check"><input id="confirm" type="checkbox"><span>أفهم أن حذف الحساب والبيانات المرتبطة به نهائي ولا يمكن التراجع عنه.</span></label>
+      <button id="delete-button" class="full danger" type="button" disabled>حذف الحساب نهائيًا</button>
+    </section>
+    <div id="status" class="status" role="status" aria-live="polite"></div>
+    <footer>اقرأ <a href="index.html">سياسة الخصوصية</a> لمعرفة البيانات التي تُحذف. إذا تعذر إكمال الطلب، تواصل عبر عنوان دعم WanHere المنشور في صفحة التطبيق على المتجر.</footer>
+  </main>
+
+  <script>
+    (() => {
+      'use strict';
+      const configUrl = 'https://khzataqcvrxyvczkoejn.supabase.co/functions/v1/account-deletion-web?config=1';
+      const emailInput = document.getElementById('email');
+      const codeInput = document.getElementById('code');
+      const status = document.getElementById('status');
+      const sendButton = document.getElementById('send-code');
+      const verifyButton = document.getElementById('verify-code');
+      const deleteButton = document.getElementById('delete-button');
+      const confirmInput = document.getElementById('confirm');
+      let accessToken = null;
+      let configPromise = null;
+
+      function showStatus(message, isError) {
+        status.textContent = message;
+        status.classList.toggle('error', Boolean(isError));
+      }
+
+      async function getConfig() {
+        if (!configPromise) {
+          configPromise = fetch(configUrl, { method: 'GET', mode: 'cors', cache: 'no-store' })
+            .then(async (response) => {
+              const data = await response.json().catch(() => null);
+              if (!response.ok || !data || typeof data.url !== 'string' || typeof data.key !== 'string') {
+                throw new Error('تعذر الاتصال بخدمة WanHere. حاول لاحقًا.');
+              }
+              const serviceUrl = new URL(data.url);
+              if (serviceUrl.protocol !== 'https:' || !serviceUrl.hostname.endsWith('.supabase.co')) {
+                throw new Error('تعذر الاتصال بخدمة WanHere.');
+              }
+              return { url: serviceUrl.origin, key: data.key };
+            })
+            .catch((error) => { configPromise = null; throw error; });
+        }
+        return configPromise;
+      }
+
+      async function postAuth(path, body) {
+        const config = await getConfig();
+        const response = await fetch(config.url + path, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', apikey: config.key },
+          body: JSON.stringify(body),
+        });
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok) throw new Error('تعذر إكمال التحقق. راجع البريد والرمز ثم أعد المحاولة.');
+        return data;
+      }
+
+      sendButton.addEventListener('click', async () => {
+        const email = emailInput.value.trim().toLowerCase();
+        if (!emailInput.checkValidity()) { emailInput.reportValidity(); return; }
+        sendButton.disabled = true;
+        showStatus('جارٍ إرسال الرمز...', false);
+        try {
+          await postAuth('/auth/v1/otp', { email, create_user: false });
+          document.getElementById('code-area').hidden = false;
+          showStatus('إذا كان البريد مسجلًا، فسيصلك رمز التحقق عليه.', false);
+        } catch (error) {
+          showStatus(error.message || 'تعذر إرسال الرمز. تحقق من الاتصال وحاول لاحقًا.', true);
+        } finally { sendButton.disabled = false; }
+      });
+
+      verifyButton.addEventListener('click', async () => {
+        const code = codeInput.value.trim();
+        if (!/^[0-9]{6,10}$/.test(code)) { showStatus('أدخل رمز التحقق الذي وصلك بالبريد.', true); return; }
+        verifyButton.disabled = true;
+        showStatus('جارٍ التحقق...', false);
+        try {
+          const data = await postAuth('/auth/v1/verify', {
+            email: emailInput.value.trim().toLowerCase(), token: code, type: 'email',
+          });
+          if (!data.access_token) throw new Error('تعذر إكمال التحقق. أعد إرسال الرمز وحاول مجددًا.');
+          accessToken = data.access_token;
+          emailInput.disabled = true;
+          codeInput.disabled = true;
+          sendButton.hidden = true;
+          verifyButton.hidden = true;
+          document.getElementById('delete-step').hidden = false;
+          showStatus('تم التحقق من البريد. راجع التنبيه ثم أكد الحذف إن كنت متأكدًا.', false);
+        } catch (error) {
+          showStatus(error.message || 'الرمز غير صحيح أو انتهت صلاحيته.', true);
+          verifyButton.disabled = false;
+        }
+      });
+
+      confirmInput.addEventListener('change', () => { deleteButton.disabled = !confirmInput.checked; });
+
+      deleteButton.addEventListener('click', async () => {
+        if (!accessToken || !confirmInput.checked) return;
+        deleteButton.disabled = true;
+        showStatus('جارٍ حذف الحساب والبيانات...', false);
+        try {
+          const config = await getConfig();
+          const response = await fetch(config.url + '/functions/v1/delete-account', {
+            method: 'POST',
+            headers: { apikey: config.key, Authorization: 'Bearer ' + accessToken },
+          });
+          if (!response.ok) {
+            throw new Error(response.status === 403
+              ? 'تعذر حذف هذا الحساب من هذه الصفحة. تواصل مع دعم WanHere.'
+              : 'لم يكتمل الحذف. تحقق من الاتصال وحاول مجددًا.');
+          }
+          accessToken = null;
+          document.querySelector('main').innerHTML = '<div class="brand">WanHere</div><h1>تم حذف الحساب</h1><p>تم حذف حساب WanHere والبيانات المرتبطة به من الخدمة.</p><p><a href="index.html">سياسة الخصوصية</a></p>';
+        } catch (error) {
+          showStatus(error.message || 'لم يكتمل الحذف. تحقق من الاتصال وحاول مجددًا.', true);
+          deleteButton.disabled = !confirmInput.checked;
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
