@@ -1,0 +1,320 @@
+{
+  "ar": {
+    "privacy": {
+      "title": "سياسة الخصوصية",
+      "updated": "آخر تحديث: 11 أكتوبر 2026",
+      "introduction": "تشرح هذه الصفحة البيانات التي يستخدمها تطبيق WanHere، ولماذا يستخدمها، وكيف يمكنك طلب حذف حسابك. WanHere تطبيق يربط بين من يبحث عن منتج والتجار الذين يقدمون عروضًا؛ ولا يبيع التطبيق المنتجات ولا يتولى الدفع أو التوصيل.",
+      "sections": [
+        {
+          "title": "البيانات التي يستخدمها التطبيق",
+          "bullets": [
+            "الحساب: البريد الإلكتروني اللازم لتسجيل الدخول، ومعرّف داخلي للحساب ومعرّف عام يظهر داخل التطبيق.",
+            "طلبات المشتري: الولاية والبلدية أو البلديات التي يختارها للطلب، الصنف، وصف ما يبحث عنه، الميزانية إن أضافها، والصورة الاختيارية.",
+            "بيانات التاجر: الولاية والبلدية، تصنيفات المنتجات، ونوع المتجر. قد يتضمن الملف عنوان المتجر وصورته للمتجر الفعلي، أو رابط المتجر الإلكتروني.",
+            "العروض والتواصل: السعر أو نوعه، رسالة العرض، صورة المنتج الاختيارية، بيان توفر التوصيل من التاجر، والرسائل المتبادلة بين طرفي المحادثة.",
+            "البلاغات والإشعارات: سبب البلاغ وتفاصيله إن كتبها المستخدم، ورمز إشعار الجهاز ونوع نظامه وحالة إرسال الإشعار."
+          ]
+        },
+        {
+          "title": "الموقع الجغرافي والصور",
+          "paragraphs": [
+            "في الاستخدام الحالي، يختار المستخدم الولاية والبلدية يدويًا؛ لا يطلب التطبيق إذن GPS ولا يتتبع موقع الجهاز. ويمكن إرفاق الصور باختيارها من مكتبة الصور؛ ولا يطلب التطبيق إذن الكاميرا أو الميكروفون."
+          ]
+        },
+        {
+          "title": "كيف نستخدم البيانات ومن يمكنه رؤيتها",
+          "bullets": [
+            "نستخدم بيانات الحساب لتسجيل الدخول وتشغيل الحساب، وبيانات الصنف والبلديات لمطابقة الطلبات مع التجار المناسبين.",
+            "تظهر تفاصيل الطلب وصوره للتجار المطابقين بحسب الصنف والبلديات المختارة. ويرى المشتري عروض التجار وبيانات المتجر اللازمة للتواصل واتخاذ القرار.",
+            "تظهر الرسائل لطرفي المحادثة. لا يطبق التطبيق تشفيرًا طرفًا لطرف على الرسائل؛ لذلك لا ترسل كلمات المرور أو بيانات الدفع الحساسة داخلها.",
+            "قد يراجع مشرف WanHere المحتوى المرتبط ببلاغ أو إجراء إشرافي، وقد يستخدم إحصاءات مجمّعة عن النشاط والصنف والبلدية لتحسين الخدمة."
+          ]
+        },
+        {
+          "title": "الخدمات التي تساعدنا على تشغيل التطبيق",
+          "paragraphs": [
+            "تُدار الحسابات وقاعدة البيانات والصور عبر Supabase. تُرسل الإشعارات عبر خدمة Expo Push. قد يتضمن إشعار الطلب جزءًا مختصرًا من وصفه، وقد يتضمن إشعار العرض السعر أو جزءًا من رسالة العرض؛ أما إشعار الرسالة فيخبر بوصول رسالة جديدة دون عرض نص الرسالة. هذه البيانات تُرسل إلى الخدمة اللازمة لإيصال الإشعار إلى جهازك.",
+            "تستضيف GitHub Pages هذه الصفحات العامة. عند زيارة الموقع قد تعالج GitHub بيانات الاتصال التقنية وفق سياسة الخصوصية الخاصة بها. نموذج حذف الحساب يتصل بخدمات Supabase مباشرةً لإرسال رمز التحقق وتنفيذ الحذف؛ لا يرسل نص الطلبات أو المحادثات إلى GitHub Pages."
+          ]
+        },
+        {
+          "title": "الاحتفاظ والحذف",
+          "paragraphs": [
+            "تبقى بيانات الحساب والمحتوى المنشور ما دام الحساب والمحتوى قائمين في الخدمة. يمكنك حذف الحساب من داخل التطبيق، أو بدء طلب الحذف من صفحة حذف الحساب. بعد تأكيد الطلب، تحذف الخدمة الحساب والبيانات المرتبطة به في قاعدة التطبيق وملفاته المخزنة، بما فيها صور الطلبات والمتجر والعروض المرتبطة بالحساب.",
+            "قد تبقى نسخ تقنية مؤقتة ضمن أنظمة النسخ الاحتياطي أو سجلات مزودي الخدمة وفق سياساتهم التشغيلية، ولا نستخدمها لإعادة الحساب المحذوف إلى الخدمة. لا نحدد هنا مدة غير مؤكدة من إعدادات مزودي الخدمة."
+          ]
+        },
+        {
+          "title": "حماية البيانات",
+          "paragraphs": [
+            "نستخدم تسجيل الدخول وصلاحيات قاعدة البيانات وتخزين الصور المحمي بحسب وظيفة التطبيق. لا توجد وسيلة نقل أو تخزين آمنة بصورة مطلقة؛ لذلك لا تشارك معلومات لا تحتاجها لإتمام التواصل أو الصفقة."
+          ]
+        },
+        {
+          "title": "التواصل والتحديثات",
+          "paragraphs": [
+            "للاستفسارات المتعلقة بالخصوصية أو بطلب حذف لا يعمل، تواصل معنا عبر contact@wanhere.net. سنحدّث هذه السياسة عند تغير طريقة عمل التطبيق أو البيانات التي يستخدمها."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "شروط الاستخدام",
+      "updated": "آخر تحديث: 11 أكتوبر 2026",
+      "introduction": "باستخدام WanHere، توافق على هذه الشروط وعلى سياسة الخصوصية. يوفّر التطبيق وسيلة لعرض طلبات المنتجات والعروض والتواصل بين المشترين والتجار.",
+      "sections": [
+        {
+          "title": "دور WanHere",
+          "paragraphs": [
+            "WanHere منصة للتعارف التجاري بين المستخدمين، وليست بائعًا أو وسيط دفع أو شركة توصيل. لا يبيع التطبيق المنتجات، ولا يستلم الأموال، ولا ينفذ التوصيل. إذا عرض التاجر التوصيل، فهو يقدمه بنفسه وبالاتفاق المباشر مع المشتري."
+          ]
+        },
+        {
+          "title": "مسؤولية المستخدم",
+          "bullets": [
+            "قدّم معلومات صحيحة ومناسبة عن الطلب أو المتجر أو العرض، وحدّثها إذا تغيرت.",
+            "أنت مسؤول عن النصوص والصور والروابط التي تنشرها، وعن التأكد من السعر وتوفر المنتج وهوية الطرف الآخر قبل الاتفاق.",
+            "لا تنشر محتوى غير قانوني أو مضللًا أو مسيئًا، ولا تستخدم التطبيق للاحتيال أو الإزعاج أو إرسال رسائل غير مرغوبة.",
+            "لا تضع كلمات مرور أو معلومات دفع أو بيانات شديدة الحساسية في وصف الطلب أو المحادثة."
+          ]
+        },
+        {
+          "title": "الاتفاق بين المشتري والتاجر",
+          "paragraphs": [
+            "يتفق المشتري والتاجر مباشرةً على توفر المنتج والسعر والدفع والاستلام أو التوصيل. على المستخدم التحقق من التفاصيل قبل إتمام أي اتفاق. لا يضمن WanHere صحة ادعاءات المستخدمين أو جودة المنتجات أو توفرها أو إتمام الصفقة أو نتيجة التوصيل."
+          ]
+        },
+        {
+          "title": "الروابط والمحتوى والبلاغات",
+          "paragraphs": [
+            "قد يحتوي ملف التاجر على رابط لمتجر خارجي. عند فتحه، تنطبق شروط وسياسة الموقع الخارجي، ولا يتحكم WanHere في محتواه. يمكنك الإبلاغ عن طلب أو عرض باستخدام زر البلاغ المخصص له. يراجع مشرفو التطبيق البلاغات وقد يرسلون تنبيهًا أو يخفون محتوى مخالفًا أو يقيّدون ظهوره عند تكرار المخالفات."
+          ]
+        },
+        {
+          "title": "إيقاف الاستخدام وحذف الحساب",
+          "paragraphs": [
+            "قد نقيّد الوصول إلى محتوى أو حساب عند وجود مخالفة لهذه الشروط أو إساءة استخدام الخدمة. يمكنك طلب حذف حسابك من داخل التطبيق أو عبر صفحة حذف الحساب. حذف الحساب يحذف البيانات المرتبطة به من الخدمة وفق سياسة الخصوصية."
+          ]
+        },
+        {
+          "title": "التغييرات والتواصل",
+          "paragraphs": [
+            "قد نحدّث التطبيق أو هذه الشروط لتحسين الخدمة أو عند تغيير طريقة عملها. ننشر النسخة المحدثة هنا ونغيّر تاريخها. للاستفسارات، تواصل معنا عبر contact@wanhere.net."
+          ]
+        }
+      ]
+    }
+  },
+  "en": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "updated": "Last updated: October 11, 2026",
+      "introduction": "This page explains what data WanHere uses, why it uses it, and how you can request account deletion. WanHere connects people looking for products with merchants who make offers. The app does not sell products or handle payment or delivery.",
+      "sections": [
+        {
+          "title": "Data used by the app",
+          "bullets": [
+            "Account: the email address used to sign in, an internal account ID, and a public ID shown in the app.",
+            "Buyer requests: the wilaya and municipality or municipalities selected for a request, its category and description, any budget you add, and an optional image.",
+            "Merchant details: the wilaya and municipality, product categories, and store type. A profile may include a physical shop address and photo or a link to an online store.",
+            "Offers and communication: the price or pricing type, offer message, optional product image, whether the merchant offers delivery, and messages exchanged in a conversation.",
+            "Reports and notifications: the report reason and any details you provide, plus the device notification token, operating system, and delivery status."
+          ]
+        },
+        {
+          "title": "Location and images",
+          "paragraphs": [
+            "You choose the wilaya and municipality manually for a request or shop. The app does not request GPS access or track your device location. You can attach images from your photo library; the app does not request camera or microphone access."
+          ]
+        },
+        {
+          "title": "How we use data and who can see it",
+          "bullets": [
+            "We use account data to sign you in and operate your account, and category and municipality data to match requests with relevant merchants.",
+            "Merchants see request details and images when they match the selected category and municipalities. Buyers see merchant offers and the store information needed to communicate and make a decision.",
+            "Messages are visible to both participants in a conversation. The app does not use end-to-end encryption, so do not send passwords or sensitive payment details in chat.",
+            "A WanHere moderator may review content connected to a report or moderation action. We may also use aggregated activity, category, and municipality statistics to improve the service."
+          ]
+        },
+        {
+          "title": "Services that help operate the app",
+          "paragraphs": [
+            "Supabase provides account, database, and image storage services. Notifications are sent through Expo Push. A request notification may include a short part of its description, and an offer notification may include its price or part of its message. A message notification only tells you that a new message arrived; it does not show the message text. This information is sent to the service needed to deliver the notification to your device.",
+            "GitHub Pages hosts these public pages. When you visit the site, GitHub may process technical connection data under its own privacy policy. The account-deletion form connects directly to Supabase to send a verification code and carry out deletion; request and conversation text is not sent to GitHub Pages."
+          ]
+        },
+        {
+          "title": "Retention and deletion",
+          "paragraphs": [
+            "Account data and published content remain while the account and content exist in the service. You can delete your account in the app or start a deletion request from the account-deletion page. After you confirm the request, the service deletes the account and related data from the app database and stored files, including request, shop, and offer images associated with the account.",
+            "Temporary technical copies may remain in backups or service-provider logs under their operational policies. We do not use them to restore a deleted account, and we do not promise a retention period that is not specified by our providers."
+          ]
+        },
+        {
+          "title": "Data protection",
+          "paragraphs": [
+            "We use sign-in controls, database permissions, and protected image storage for the app’s features. No method of transmission or storage is completely secure, so do not share information that is not needed to communicate or complete a transaction."
+          ]
+        },
+        {
+          "title": "Contact and updates",
+          "paragraphs": [
+            "For privacy questions or if account deletion does not work, contact us at contact@wanhere.net. We will update this policy if the app’s operation or the data it uses changes."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of Use",
+      "updated": "Last updated: October 11, 2026",
+      "introduction": "By using WanHere, you agree to these terms and to the Privacy Policy. The app lets users publish product requests and offers and communicate with buyers and merchants.",
+      "sections": [
+        {
+          "title": "WanHere’s role",
+          "paragraphs": [
+            "WanHere is a platform that connects users for commercial purposes. It is not a seller, payment intermediary, or delivery company. The app does not sell products, collect payments, or carry out deliveries. If a merchant offers delivery, the merchant provides it and agrees on it directly with the buyer."
+          ]
+        },
+        {
+          "title": "User responsibilities",
+          "bullets": [
+            "Provide accurate and appropriate information about your request, shop, or offer, and update it if it changes.",
+            "You are responsible for the text, images, and links you publish, and for checking the price, product availability, and other party’s identity before making an agreement.",
+            "Do not post unlawful, misleading, or abusive content, or use the app for fraud, harassment, or unsolicited messages.",
+            "Do not put passwords, payment information, or highly sensitive data in a request description or conversation."
+          ]
+        },
+        {
+          "title": "Agreement between buyer and merchant",
+          "paragraphs": [
+            "The buyer and merchant agree directly on product availability, price, payment, collection, or delivery. Users should check the details before making any agreement. WanHere does not guarantee the accuracy of user claims, product quality or availability, completion of a transaction, or delivery outcome."
+          ]
+        },
+        {
+          "title": "Links, content, and reports",
+          "paragraphs": [
+            "A merchant profile may include a link to an external store. When you open it, the external site’s terms and privacy policy apply, and WanHere does not control its content. You can report a request or offer using its report button. Moderators may review reports, send a warning, hide content that violates these terms, or limit its visibility when violations are repeated."
+          ]
+        },
+        {
+          "title": "Restrictions and account deletion",
+          "paragraphs": [
+            "We may restrict access to content or an account if these terms are violated or the service is misused. You can request account deletion in the app or through the account-deletion page. Account deletion removes related data from the service as described in the Privacy Policy."
+          ]
+        },
+        {
+          "title": "Changes and contact",
+          "paragraphs": [
+            "We may update the app or these terms to improve the service or reflect changes in how it works. We publish the updated version here and change its date. For questions, contact us at contact@wanhere.net."
+          ]
+        }
+      ]
+    }
+  },
+  "fr": {
+    "privacy": {
+      "title": "Politique de confidentialité",
+      "updated": "Dernière mise à jour : 11 octobre 2026",
+      "introduction": "Cette page explique quelles données WanHere utilise, pourquoi elles sont utilisées et comment demander la suppression de votre compte. WanHere met en relation les personnes qui recherchent un produit et les vendeurs qui proposent des offres. L’application ne vend pas de produits et ne gère ni le paiement ni la livraison.",
+      "sections": [
+        {
+          "title": "Données utilisées par l’application",
+          "bullets": [
+            "Compte : l’adresse e-mail utilisée pour vous connecter, un identifiant interne du compte et un identifiant public affiché dans l’application.",
+            "Demandes des acheteurs : la wilaya et la ou les communes choisies, la catégorie et la description du produit, le budget éventuel et une image facultative.",
+            "Informations du vendeur : la wilaya, la commune, les catégories de produits et le type de boutique. Le profil peut contenir l’adresse et la photo d’une boutique physique ou le lien d’une boutique en ligne.",
+            "Offres et échanges : le prix ou son type, le message de l’offre, une image facultative du produit, la disponibilité de la livraison proposée par le vendeur et les messages échangés dans une conversation.",
+            "Signalements et notifications : le motif du signalement et les précisions éventuellement ajoutées, ainsi que le jeton de notification de l’appareil, son système d’exploitation et l’état d’envoi."
+          ]
+        },
+        {
+          "title": "Localisation et images",
+          "paragraphs": [
+            "Vous choisissez manuellement la wilaya et la commune pour une demande ou une boutique. L’application ne demande pas l’accès au GPS et ne suit pas la position de votre appareil. Vous pouvez joindre des images depuis votre photothèque ; l’application ne demande pas l’accès à la caméra ni au microphone."
+          ]
+        },
+        {
+          "title": "Utilisation des données et personnes qui peuvent les voir",
+          "bullets": [
+            "Nous utilisons les données du compte pour vous connecter et gérer votre compte, et les catégories et communes pour associer les demandes aux vendeurs concernés.",
+            "Les vendeurs voient les détails et les images des demandes correspondant aux catégories et communes choisies. Les acheteurs voient les offres des vendeurs et les informations de boutique nécessaires aux échanges et à leur décision.",
+            "Les messages sont visibles par les deux participants à une conversation. L’application ne chiffre pas les conversations de bout en bout. N’envoyez donc pas de mots de passe ni de données de paiement sensibles dans le chat.",
+            "Un modérateur WanHere peut examiner un contenu lié à un signalement ou à une mesure de modération. Nous pouvons aussi utiliser des statistiques agrégées sur l’activité, les catégories et les communes pour améliorer le service."
+          ]
+        },
+        {
+          "title": "Services nécessaires au fonctionnement de l’application",
+          "paragraphs": [
+            "Supabase héberge les comptes, la base de données et les images. Les notifications sont envoyées par Expo Push. Une notification de demande peut contenir un court extrait de sa description ; une notification d’offre peut contenir le prix ou une partie du message. Une notification de message indique uniquement qu’un nouveau message est arrivé, sans en afficher le texte. Ces informations sont transmises au service nécessaire à l’envoi de la notification sur votre appareil.",
+            "GitHub Pages héberge ces pages publiques. Lors de votre visite, GitHub peut traiter des données techniques de connexion conformément à sa propre politique de confidentialité. Le formulaire de suppression du compte se connecte directement à Supabase pour envoyer un code de vérification et effectuer la suppression ; le texte des demandes et des conversations n’est pas envoyé à GitHub Pages."
+          ]
+        },
+        {
+          "title": "Conservation et suppression",
+          "paragraphs": [
+            "Les données du compte et les contenus publiés sont conservés tant que le compte et les contenus existent dans le service. Vous pouvez supprimer votre compte depuis l’application ou commencer une demande depuis la page de suppression du compte. Après confirmation, le service supprime le compte et les données associées de la base de l’application et des fichiers stockés, y compris les images de demandes, de boutiques et d’offres liées au compte.",
+            "Des copies techniques temporaires peuvent subsister dans les sauvegardes ou les journaux des prestataires, conformément à leurs règles opérationnelles. Elles ne servent pas à rétablir un compte supprimé. Nous n’indiquons pas de durée de conservation qui n’est pas précisée par nos prestataires."
+          ]
+        },
+        {
+          "title": "Protection des données",
+          "paragraphs": [
+            "Nous utilisons l’authentification, les autorisations de la base de données et un stockage protégé des images selon les fonctionnalités de l’application. Aucun moyen de transmission ou de stockage n’est totalement sûr ; ne partagez donc que les informations nécessaires aux échanges ou à la transaction."
+          ]
+        },
+        {
+          "title": "Contact et mises à jour",
+          "paragraphs": [
+            "Pour toute question sur la confidentialité ou si la suppression du compte ne fonctionne pas, contactez-nous à contact@wanhere.net. Nous mettrons cette politique à jour si le fonctionnement de l’application ou les données utilisées évoluent."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Conditions d’utilisation",
+      "updated": "Dernière mise à jour : 11 octobre 2026",
+      "introduction": "En utilisant WanHere, vous acceptez les présentes conditions et la Politique de confidentialité. L’application permet aux utilisateurs de publier des demandes de produits et des offres, puis d’échanger entre acheteurs et vendeurs.",
+      "sections": [
+        {
+          "title": "Rôle de WanHere",
+          "paragraphs": [
+            "WanHere est une plateforme de mise en relation commerciale entre utilisateurs. Ce n’est ni un vendeur, ni un intermédiaire de paiement, ni une société de livraison. L’application ne vend pas de produits, ne reçoit pas de paiements et n’effectue pas de livraisons. Si un vendeur propose la livraison, il l’assure lui-même selon un accord direct avec l’acheteur."
+          ]
+        },
+        {
+          "title": "Responsabilités de l’utilisateur",
+          "bullets": [
+            "Fournissez des informations exactes et appropriées sur votre demande, votre boutique ou votre offre, et mettez-les à jour si elles changent.",
+            "Vous êtes responsable des textes, images et liens que vous publiez, ainsi que de la vérification du prix, de la disponibilité du produit et de l’identité de l’autre partie avant tout accord.",
+            "Ne publiez pas de contenu illégal, trompeur ou abusif et n’utilisez pas l’application pour frauder, importuner ou envoyer des messages non sollicités.",
+            "Ne saisissez pas de mots de passe, d’informations de paiement ni de données très sensibles dans la description d’une demande ou une conversation."
+          ]
+        },
+        {
+          "title": "Accord entre l’acheteur et le vendeur",
+          "paragraphs": [
+            "L’acheteur et le vendeur conviennent directement de la disponibilité du produit, du prix, du paiement, du retrait ou de la livraison. Chaque utilisateur doit vérifier les détails avant de conclure un accord. WanHere ne garantit ni l’exactitude des déclarations des utilisateurs, ni la qualité ou la disponibilité des produits, ni la réalisation de la transaction ou de la livraison."
+          ]
+        },
+        {
+          "title": "Liens, contenus et signalements",
+          "paragraphs": [
+            "Le profil d’un vendeur peut contenir un lien vers une boutique externe. En l’ouvrant, vous êtes soumis aux conditions et à la politique de confidentialité du site externe, dont WanHere ne contrôle pas le contenu. Vous pouvez signaler une demande ou une offre à l’aide du bouton prévu à cet effet. Les modérateurs examinent les signalements et peuvent envoyer un avertissement, masquer un contenu contraire aux présentes conditions ou limiter sa visibilité en cas de récidive."
+          ]
+        },
+        {
+          "title": "Restriction d’accès et suppression du compte",
+          "paragraphs": [
+            "Nous pouvons restreindre l’accès à un contenu ou à un compte en cas de violation des présentes conditions ou d’utilisation abusive du service. Vous pouvez demander la suppression de votre compte depuis l’application ou la page de suppression du compte. Les données associées sont supprimées conformément à la Politique de confidentialité."
+          ]
+        },
+        {
+          "title": "Modifications et contact",
+          "paragraphs": [
+            "Nous pouvons mettre à jour l’application ou ces conditions pour améliorer le service ou refléter une évolution de son fonctionnement. La version mise à jour est publiée ici avec une nouvelle date. Pour toute question, contactez-nous à contact@wanhere.net."
+          ]
+        }
+      ]
+    }
+  }
+}
